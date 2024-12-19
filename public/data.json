@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Laptop",
+    "price": 1200.0,
+    "image": "https://i.ibb.co.com/4VwC8GT/dai-ke-Gkra-Tr-CYA-0-unsplash.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Smartphone",
+    "price": 800.0,
+    "image": "https://i.ibb.co.com/bXM4fk8/piggybank-rkk-Mv-Twmit-A-unsplash.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Sony Camera",
+    "price": 100.0,
+    "image": "https://i.ibb.co.com/418ts4N/sony-camera.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Camera",
+    "price": 400.0,
+    "image": "https://i.ibb.co.com/BGTrT1v/canon-camera.jpg"
+  }
+]

@@ -1,13 +1,26 @@
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { AuthContext } from "./../Provider/AuthProvider";
 
 const Login = () => {
-      const handleLogin = (e)=>{
-            e.preventDefault();
-            const form = e.target;
-            const email = form.email.value;
-            const password = form.password.value;
-            console.log(email, password)
-      }
+  const { logInUser } = useContext(AuthContext);
+
+  const handleLogin = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const email = form.email.value;
+    const password = form.password.value;
+      // Login user
+      logInUser(email, password)
+      .then(result =>{
+            const regUser = result.user;
+            console.log('login', regUser)
+      })
+      .catch(error =>{
+            console.log(error.message)
+      })
+  };
+
   return (
     <>
       <div className="hero bg-base-200 min-h-screen">
@@ -52,9 +65,16 @@ const Login = () => {
                 </label>
               </div>
               <div className="form-control mt-6">
-                <button type="submit" className="btn btn-primary">Login</button>
+                <button type="submit" className="btn btn-primary">
+                  Login
+                </button>
               </div>
-              <p className="text-center font-bold py-3">New to this site <Link className="text-primary" to='/register'>Register</Link></p>
+              <p className="text-center font-bold py-3">
+                New to this site{" "}
+                <Link className="text-primary" to="/register">
+                  Register
+                </Link>
+              </p>
             </form>
           </div>
         </div>
